@@ -13,7 +13,7 @@
     },
     "model_attr": {
         "case_folder": "001_floodsim/sample_code/hipims_case",
-        "birthday": "2023-03-08 20:03",
+        "birthday": "2023-03-08 20:06",
         "num_GPU": 1,
         "run_time": "[0, 7200, 900, 1800]",
         "num_gauges": 2

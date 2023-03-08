@@ -152,4 +152,5 @@ cython_debug/
 #.idea/
 
 001_floodsim/hipms_case/
+001_floodsim/sample_code/hipms_case/
 data/
