@@ -12,8 +12,8 @@
         }
     },
     "model_attr": {
-        "case_folder": "/home/alphonse/Documents/002_Xuhui/001_floodsim/hipims_case",
-        "birthday": "2023-02-13 17:06",
+        "case_folder": "001_floodsim/sample_code/hipims_case",
+        "birthday": "2023-03-08 20:03",
         "num_GPU": 1,
         "run_time": "[0, 7200, 900, 1800]",
         "num_gauges": 2

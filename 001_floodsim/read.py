@@ -4,6 +4,7 @@ from pypims.IO.demo_functions import get_sample_data
 
 dem_file, demo_data, data_path = get_sample_data() # get the path of sample data
 # print(data_path)
+print(data_path)
 
 # DEM show
 DEM = IO.Raster(os.path.join(data_path,'DEM.gz')) # load the file into a Raster object

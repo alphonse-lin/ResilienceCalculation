@@ -29,7 +29,8 @@ ngpus = 1
 
 
 
-case_folder = os.path.join(os.getcwd(), 'hipims_case') # define a case folder in the current directory
+# case_folder = os.path.join(os.getcwd(), 'hipims_case') # define a case folder in the current directory
+case_folder = r'001_floodsim/sample_code/hipims_case' # define a case folder in the current directory
 print(case_folder)
 case_input = IO.InputHipims(DEM, num_of_sections=ngpus, case_folder=case_folder)
 

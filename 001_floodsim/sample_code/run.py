@@ -10,9 +10,10 @@ def timeCount(calcMode, t_start):
 if __name__=='__main__':
 
     t_start = time.time()
+    path=r'001_floodsim/sample_code/hipims_case'
 
     ngpus = 1
-    case_folder = os.path.join(os.getcwd(), 'hipims_case')
+    case_folder = path
     print(case_folder)
 
     if ngpus > 1:
