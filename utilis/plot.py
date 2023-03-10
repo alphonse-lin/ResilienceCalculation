@@ -41,4 +41,5 @@ if __name__ == '__main__':
 
                 save(asc_data, output_path)
                 print(file)
+    print("successful")
     
