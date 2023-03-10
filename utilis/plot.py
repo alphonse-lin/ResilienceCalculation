@@ -15,6 +15,7 @@ def show(data):
     plt.show()
 
 def save(data, path):
+    plt.figure(figsize=(10,10),dpi=300)
     plt.clf()
     plt.imshow(data)
     plt.savefig(path, bbox_inches='tight')
@@ -32,14 +33,13 @@ if __name__ == '__main__':
 
     for file in files:
         if not os.path.isdir(file):
-            if "h_" in file and file.endswith('asc'):
-                asc_path=os.path.join(asc_dir, file)
-                asc_data = np.loadtxt(asc_path, skiprows=6)
-                
+            if "h_" in file and file.endswith('asc'):                
                 file_name=file.split('.')[0]
                 output_path=os.path.join(img_dir,file_name+".png")
-
-                save(asc_data, output_path)
+                if not os.path.exists(output_path):
+                    asc_path=os.path.join(asc_dir, file)
+                    asc_data = np.loadtxt(asc_path, skiprows=6)
+                    save(asc_data, output_path)
                 print(file)
     print("successful")
     

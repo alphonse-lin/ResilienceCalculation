@@ -4,6 +4,7 @@ from osgeo import gdal
 import numpy as np
 import matplotlib.pyplot as plt
 import time
+import os
 
 def mkdir(folder):
     if not os.path.exists(folder):
