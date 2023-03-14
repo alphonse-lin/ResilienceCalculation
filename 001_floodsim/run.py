@@ -22,4 +22,4 @@ if __name__=='__main__':
         flood.run(case_folder)
 
     print('finished')
-    timeCount('', t_start)
+    timeCount('simulation', t_start)
