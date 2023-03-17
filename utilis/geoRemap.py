@@ -4,8 +4,8 @@ import os
 if __name__ == '__main__':
     dem_path=r'data\part_london\part\TQ27ne_DTM_1m.tif'
     
-    input_file =r'data\output\asc\velocity\hU_7200.asc'
-    output_file = r'data\output\asc\velocity\hU_7200.tif'
+    input_file =r'data\output\asc\h_7200.asc'
+    output_file = r'data\output\asc\h_7200.tif'
 
     # open input file
     input_dataset = gdal.Open(input_file)

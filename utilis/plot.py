@@ -21,8 +21,8 @@ def save(data, path):
     plt.savefig(path, bbox_inches='tight')
 
 if __name__ == '__main__':
-    asc_dir=r'data\output\asc'
-    img_dir=r'data\output\image'
+    asc_dir=r'data\output\output\output'
+    img_dir=r'data\output\output\image'
 
     # path=r'data\part_london\part\TQ27ne_DTM_1m.tif'
     # arr=readtif(path)
