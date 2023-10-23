@@ -50,6 +50,9 @@ def as_num(x):
     y = '{:.10f}'.format(x)  # .10f 保留10位小数
     return y
 
+def getfiles(file_dir):
+    filenames=os.listdir(file_dir)
+    return filenames
 
 
 if __name__ == '__main__':

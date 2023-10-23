@@ -29,7 +29,7 @@ def exportBasedOnTime(geo, output_path, t_start, t_end):
 
 
 if __name__ == '__main__':
-    input_dir=r'D:\Code\114_temp\008_CodeCollection\005_java\matsim_preparation\src\main\resources\output_ucl\002\r_global\output'
+    input_dir=r'D:\Code\114_temp\008_CodeCollection\005_java\matsim_preparation\src\main\resources\debug\tq38_london_strategy\static_waittodry\static_waittodry\output_no_event'
     # -------------------------------------------------------------------
     # 1. NETWORK: Read a MATSim network:
     net = matsim.read_network(os.path.join(input_dir, 'output_network.xml.gz'))
@@ -49,8 +49,8 @@ if __name__ == '__main__':
     # Only returns events of type 'entered link' and 'left link':
     from collections import defaultdict
     
-    output_dir=r'D:\Code\114_temp\008_CodeCollection\005_java\matsim_preparation\src\main\resources\output_ucl\002\r_global\output_img'
-    events = matsim.event_reader(os.path.join(input_dir,'output_events.xml.gz'), types='entered link,left link')
+    output_dir=r'D:\Code\114_temp\008_CodeCollection\005_java\matsim_preparation\src\main\resources\debug\tq38_london_strategy\static_waittodry\static_waittodry\output_no_event\ITERS\it.20'
+    events = matsim.event_reader(os.path.join(output_dir,'20.events.xml.gz'), types='entered link')
     # t_start=32400
     # t_end=36000
 
@@ -68,12 +68,10 @@ if __name__ == '__main__':
     volumes = geo.merge(link_counts, on='link_id')
     # volumes.plot(column='count', figsize=(10,10), cmap='Wistia') #cmap is colormap
     volumes.to_excel(os.path.join(output_dir,f'link_counts.xlsx'))
-
-
-    # print("start loop")
-    # for i in range(0,30):
-    #     t_start=i*3600
-    #     t_end=(i+1)*3600
-    #     exportBasedOnTime(geo, os.path.join(output_dir,'output_events_{0}.xlsx'.format(i)), t_start, t_end)
-    #     print("export {0} done".format(i))
+    print("start loop")
+    for i in range(0,30):
+        t_start=i*3600
+        t_end=(i+1)*3600
+        exportBasedOnTime(geo, os.path.join(output_dir,'output_events_{0}.xlsx'.format(i)), t_start, t_end)
+        print("export {0} done".format(i))
 
