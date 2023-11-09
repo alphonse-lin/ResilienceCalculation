@@ -1,6 +1,8 @@
 import gzip
 import pandas as pd
 import os
+
+# Read the linkstats.txt.gz file
 if __name__ == '__main__':
     name_list=['4-00-pm', '7-30-am', '12-00-pm', 'no_event']
     input_dir=r'D:/Code/114_temp/008_CodeCollection/005_java/matsim_preparation/src/main/resources/debug/tq38_london_strategy/static_waittodry/static_waittodry'
@@ -8,7 +10,7 @@ if __name__ == '__main__':
     for name in name_list:
         path=os.path.join(input_dir, f'output_{name}/ITERS/it.20')
         with gzip.open(os.path.join(path,'20.linkstats.txt.gz')) as f:
-            data = pd.read_csv(f,delimiter='\t')
+            data = pd.read_csv(f'',delimiter='\t')
 
         hrs_avg_columns = data.filter(regex='HRS.*avg')
         link_column = data[['LINK']]

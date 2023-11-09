@@ -69,9 +69,12 @@ if __name__ == '__main__':
     # volumes.plot(column='count', figsize=(10,10), cmap='Wistia') #cmap is colormap
     volumes.to_excel(os.path.join(output_dir,f'link_counts.xlsx'))
     print("start loop")
-    for i in range(0,30):
-        t_start=i*3600
-        t_end=(i+1)*3600
-        exportBasedOnTime(geo, os.path.join(output_dir,'output_events_{0}.xlsx'.format(i)), t_start, t_end)
+    t_step=450
+    t_hours=30
+    t_count=t_hours*3600/450
+    for i in range(0,t_count):
+        t_start=i*t_step
+        t_end=(i+1)*t_step
+        exportBasedOnTime(geo, os.path.join(output_dir,'450_output_events_{0}.xlsx'.format(i)), t_start, t_end)
         print("export {0} done".format(i))
 
