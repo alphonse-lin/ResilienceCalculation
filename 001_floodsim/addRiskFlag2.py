@@ -21,8 +21,10 @@ def calculate_risk_and_ratio_for_pairs(row, gap):
         if row[i+gap+1]==0:
             risk_level = 'flooded'
         elif A <= 0 and B <= 0:
+            A=0.0001
             risk_level = 'lowest'
         elif A <= 0 and B > 0:
+            A=0.0001
             risk_level = 'low risk'
         elif A > 0 and B < 0:
             risk_level = 'high risk'
