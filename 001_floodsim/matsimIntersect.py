@@ -21,7 +21,7 @@ if __name__ == '__main__':
         #endregion
 
         # region 读取link_count文件
-        ti_tag='7:30'
+        ti_tag=tag
         # 输入小时数
         input_hours = time_dic[ti_tag]
         # 将小时转换为秒
